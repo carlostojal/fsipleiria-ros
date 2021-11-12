@@ -24,7 +24,7 @@
 
 - Open a terminal and type the command ```roscore```. This starts the ROS core framework.
 - Open a new terminal and type ```catkin_make``` inside the root of this directory.
-- Open a new terminal and enter this command, : ```rosrun fsipleiria {$NODE_NAME}```, replacing in each time $NODE_NAME by this:
+- Open a new terminal and enter this command, : ```rosrun controls {$NODE_NAME}```, replacing in each time $NODE_NAME by this:
     - brake_listener.py
     - clutch_listener.py
     - gears_listener.py

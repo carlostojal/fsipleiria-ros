@@ -15,7 +15,7 @@ def listener():
 
     rospy.init_node('throttle_listener', anonymous=True)
 
-    rospy.Subscriber("throttle", Float64, callback)
+    rospy.Subscriber("controls/throttle", Float64, callback)
 
     rospy.spin()
 

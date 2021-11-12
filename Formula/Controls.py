@@ -5,7 +5,7 @@ class Controls:
 
     def __init__(self):
         # these are the topics that we will be publishing to
-        self.throttle_pub = rospy.Publisher('controls/throttle', Float64, queue_size=10)
+        self.throttle_pub = rospy.Publisher('/controls/throttle', Float64, queue_size=10)
         self.clutch_pub = rospy.Publisher('controls/clutch', Float64, queue_size=10)
         self.brake_pub = rospy.Publisher('controls/brake', Float64, queue_size=10)
         self.gears_pub = rospy.Publisher('controls/gears', Float64, queue_size=10)

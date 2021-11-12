@@ -1,8 +1,11 @@
+import rospy
+from std_msgs.msg import Float64
 
 class Controls:
 
     def __init__(self):
-        return
+        self.throttle_pub = rospy.Publisher('throttle', Float64, queue_size=10)
+        rospy.init_node('controls', anonymous=True)
 
     def clutch(value):
         # set clutch percentage here
@@ -12,9 +15,8 @@ class Controls:
         # set brake percentage here
         return
     
-    def throttle(value):
-        # set throttle percentage here
-        return
+    def throttle(self, value):
+        self.throttle_pub.publish(value)
 
     def gearUp():
         # gear up

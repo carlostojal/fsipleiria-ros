@@ -2,12 +2,12 @@
 <package format="2">
   <name>fsipleiria</name>
   <version>0.0.0</version>
-  <description>The fsipleiria package</description>
+  <description>FSIPLeiria ROS Package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="carlostojal@todo.todo">carlostojal</maintainer>
+  <maintainer email="2211006@my.ipleiria.pt">carlostojal</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

@@ -24,8 +24,8 @@ This is the ROS software for the driverless formula car of the FSIPLeiria team.
 ## Get up and running
 
 - Open a terminal and type the command ```roscore```. This starts the ROS core framework.
-- Open a new terminal and type ```catkin_make``` inside the root of this directory.
-- Start the controls package by running ```rosrun controls controls.launch```.
+- Open a new terminal and type ```catkin_make``` inside the "fsipleiria" directory.
+- Start the controls package by running ```roslaunch controls controls.launch```.
 
 ## But how do I control the car?
 

@@ -1,3 +1,5 @@
+.vscode
 Formula/__pycache__/
+Formula/Formula/__pycache__/
 fsipleiria/build/*
-fsipleiria/devel/*
+fsipleiria/devel/lib/*

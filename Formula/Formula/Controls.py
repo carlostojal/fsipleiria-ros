@@ -1,20 +1,32 @@
 import rospy
-from std_msgs.msg import Float64
+from std_msgs.msg import Float64, Int8
+from time import sleep
 
 class Controls:
 
-    def __init__(self):
+    def __init__(self, wait_time=0.0):
         # these are the topics that we will be publishing to
         self.throttle_pub = rospy.Publisher('/controls/throttle', Float64, queue_size=10)
         self.clutch_pub = rospy.Publisher('controls/clutch', Float64, queue_size=10)
         self.brake_pub = rospy.Publisher('controls/brake', Float64, queue_size=10)
-        self.gears_pub = rospy.Publisher('controls/gears', Float64, queue_size=10)
+        self.gears_pub = rospy.Publisher('controls/gears', Int8, queue_size=10)
         self.steering_pub = rospy.Publisher('controls/steering', Float64, queue_size=10)
         # this declares this instance as a rospy node
         rospy.init_node('controls', anonymous=True)
+        # sometimes the subscriber is not yet ready to receive messages, so give it some time
+        sleep(wait_time)
+
+    def __del__(self):
+        # when class is destroyed (or garbage collected)
+        # all publushers are unregistered
+        self.throttle_pub.unregister()
+        self.clutch_pub.unregister()
+        self.brake_pub.unregister()
+        self.gears_pub.unregister()
+        self.steering_pub.unregister()
 
     def clutch(self, value):
-        self.clutch_pub.publish(value)        
+        self.clutch_pub.publish(value)
 
     def brake(self, value):
         self.brake_pub.publish(value)

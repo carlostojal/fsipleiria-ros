@@ -1,18 +1,19 @@
 # fsipleiria-ros
 
+## Introduction
+
+This is the ROS software for the driverless formula car of the FSIPLeiria team.
+
 ## Requirements
 
 ### Hardware 
 
 - A 32 or 64-bit computer.
-- A microcontroller (Arduino, ARM Mbed, or Tiva-C Launchpads).
-- USB or ethernet link between the computer and the microcontroller.
 
 ### Software
 
 - Operating system: Ubuntu 20.04 (Focal)
 - ROS Noetic Ninjemys
-    - rosservice
 
 ## Setup
 
@@ -24,11 +25,10 @@
 
 - Open a terminal and type the command ```roscore```. This starts the ROS core framework.
 - Open a new terminal and type ```catkin_make``` inside the root of this directory.
-- Open a new terminal and enter this command, : ```rosrun controls {$NODE_NAME}```, replacing in each time $NODE_NAME by this:
-    - brake_listener.py
-    - clutch_listener.py
-    - gears_listener.py
-    - steering_listener.py
-    - throttle_listener.py
+- Start the controls package by running ```rosrun controls controls.launch```.
 
-This is still to be more automated.
+## But how do I control the car?
+
+- Make sure ROS is running by following the instructions on "Get up and running".
+- For now, place your code inside the ```Formula``` folder. Otherwise Python won't know where our wonderful modules are.
+- Just start coding and use the modules like shown in ```example.py```. Feel free to explore the modules for better understanding.

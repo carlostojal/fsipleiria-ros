@@ -1,6 +1,6 @@
-from Controls import Controls
+from Formula import Controls
 
-controls = Controls()
+controls = Controls.Controls()
 
 controls.throttle(0.76)
 controls.brake(0.10)

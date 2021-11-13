@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     ros::NodeHandle n;
 
     // the second argument is the queue size
-    ros::Subscriber sub = n.subscribe("controls/throttle", 10000, callback);
+    ros::Subscriber sub = n.subscribe("controls/throttle", 1000, callback);
 
     ros::spin();
 

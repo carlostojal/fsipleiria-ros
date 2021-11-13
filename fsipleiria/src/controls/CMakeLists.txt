@@ -166,7 +166,7 @@ catkin_install_python(PROGRAMS
   scripts/throttle_listener.py
   scripts/brake_listener.py
   scripts/gears_listener.py
-  scripts/throttle_listener.py
+  scripts/steering_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -80,8 +80,6 @@ class Controls:
 
     def steering(self, value, time=0.0):
 
-        print("Before the thread: " + str(datetime.datetime.now().time()))
-
         if time != 0.0:
             thread = Thread(target=self.gradual_value_update, args=(value, time, AvailableControls.Steering))
             thread.start()
@@ -93,8 +91,6 @@ class Controls:
         # 0 -> -1 = left
 
     def gradual_value_update(self, target_value, time, control=AvailableControls.None_):
-
-        print("Inside the thread: " + str(datetime.datetime.now().time()))
 
         if control == AvailableControls.Steering:
 
@@ -127,5 +123,3 @@ class Controls:
                 return
             
             sleep(self.STEP_TIME)
-
-        print("End of loop: " + str(datetime.datetime.now().time()))

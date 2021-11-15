@@ -27,6 +27,7 @@ class Controls:
     STEP_TIME = 1
 
     def __init__(self, wait_time=0.0):
+        print("Initializing controls.")
         # these are the topics that we will be publishing to
         self.throttle_pub = rospy.Publisher('/controls/throttle', Float64, queue_size=10)
         self.clutch_pub = rospy.Publisher('controls/clutch', Float64, queue_size=10)
@@ -51,7 +52,10 @@ class Controls:
         # sometimes the subscriber is not yet ready to receive messages, so give it some time
         sleep(wait_time)
 
+        print("Controls initialized.")
+
     def __del__(self):
+        print("Unregistering controls.")
         # when class is destroyed (or garbage collected)
         # all publushers are unregistered
         self.throttle_pub.unregister()
@@ -59,6 +63,7 @@ class Controls:
         self.brake_pub.unregister()
         self.gears_pub.unregister()
         self.steering_pub.unregister()
+        print("Controls unregistered.")
 
     def clutch(self, value):
         self.current_clutch_value = value

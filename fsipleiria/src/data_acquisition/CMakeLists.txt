@@ -161,6 +161,8 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/geolocation_publisher.py
+  scripts/engine_speed_publisher.py
+  scripts/can_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

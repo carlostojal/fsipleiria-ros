@@ -4,6 +4,12 @@
 
 This is the ROS software for the driverless formula car of the FSIPLeiria team.
 
+## Functional overview
+
+The custom Python libraries provide a way to communicate with the car.\
+The libraries communicate with ROS, that communicate with the electronic units via CAN bus.\
+The most recent frame of each ID is stored on a cache server (RAM memory) (Redis Server).
+
 ## Requirements
 
 ### Hardware 
@@ -14,6 +20,7 @@ This is the ROS software for the driverless formula car of the FSIPLeiria team.
 
 - Operating system: Ubuntu 20.04 (Focal)
 - ROS Noetic Ninjemys
+- Redis Server
 
 ## Setup
 

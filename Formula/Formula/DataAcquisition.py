@@ -1,3 +1,5 @@
+import rospy
+from std_msgs.msg import Float64, Int8
 import redis
 import json
 from Config import Config
@@ -20,13 +22,9 @@ class DataAcquisition:
 
     def listenEngineRPM(self, callback):
 
-        # TODO
-        # think of a performant and elegant way to do this
-        # this is just a placeholder
+        rospy.Subscriber("/data_acquisition/engine_speed", Float64, callback)
 
-        callback(self.getEngineRPM())
-
-    # Speed
+    # Ground speed
     def getSpeed(self):
 
         r = redis.Redis(host=Config.redis_host, port=Config.redis_port, db=Config.redis_db)
@@ -42,6 +40,4 @@ class DataAcquisition:
 
     def listenSpeed(self, callback):
 
-        callback(self.getSpeed())
-    
-
+        rospy.Subscriber("/data_acquisition/ground_speed", Float64, callback)

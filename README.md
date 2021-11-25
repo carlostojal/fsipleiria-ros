@@ -30,6 +30,7 @@ The most recent frame of each ID is stored on a cache server (RAM memory) (Redis
 
 ## Get up and running
 
+- Before starting, set the environment variables REDIS_HOST, REDIS_PORT and REDIS_DB on your OS.
 - Open a terminal and type the command ```roscore```. This starts the ROS core framework.
 - Open a new terminal and type ```catkin_make``` inside the "fsipleiria" directory.
 - Start the controls package by running ```roslaunch controls controls.launch```.

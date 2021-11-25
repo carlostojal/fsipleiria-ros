@@ -1,5 +1,5 @@
 import rospy
-from std_msgs.msg import Float64, Int8
+from std_msgs.msg import Float64
 import redis
 import json
 from Config import Config

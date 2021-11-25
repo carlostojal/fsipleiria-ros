@@ -1,6 +1,5 @@
 import rospy
 from std_msgs.msg import Float64, Int8
-from enum import Enum
 from time import sleep    
 
 class Controls:

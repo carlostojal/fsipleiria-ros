@@ -1,7 +1,7 @@
 <launch>
     <node name="clutch_listener" pkg="controls" type="clutch_listener.py" />
     <node name="brake_listener" pkg="controls" type="brake_listener.py" />
-    <node name="throttle_listener" pkg="controls" type="throttle_listener" />
+    <node name="throttle_listener" pkg="controls" type="throttle_listener.py" />
     <node name="gears_listener" pkg="controls" type="gears_listener.py" />
     <node name="steering_listener" pkg="controls" type="steering_listener.py" />
 </launch>

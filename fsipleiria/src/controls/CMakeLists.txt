@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  can_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -133,8 +134,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(throttle_listener_cpp src/throttle_listener.cpp)
-target_link_libraries(throttle_listener_cpp ${catkin_LIBRARIES})
+# add_executable(throttle_listener_cpp src/throttle_listener.cpp)
+# target_link_libraries(throttle_listener_cpp ${catkin_LIBRARIES})
 ## add_dependencies(throttle_listener_cpp roscpp_generate_messages_cpp)
 
 ## Rename C++ executable without prefix
